@@ -4,7 +4,7 @@ import "./App.css";
 import { JSONTree } from "react-json-tree";
 import CheckBox from "./components/libreria/CheckBox.";
 import Label from "./components/libreria/Label";
-import Tree from "./Tree";
+import Tree from "./Tree/TreeCustom";
 import { DATA } from "./constants/constants";
 import SolTree from "./SolTree";
 
@@ -89,7 +89,9 @@ function App() {
         <div className="col-12">
           <h4 className="text-danger">Senza libreria soluzione patrizia</h4>
 
-          <SolTree treeData={treeData} />
+          <div>
+            <SolTree data={treeData} />
+          </div>
         </div>
       </div>
       <div className="row mt-4">

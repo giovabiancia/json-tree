@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import Node from "../Node";
 
-export default function Branch({ item, level }) {
+import NodeCustom from "../Node/NodeCustom";
+
+export default function BranchCustom({ item, level }) {
   const [selected, setSelected] = useState(item.selected ?? false);
 
   const checkIfHasChildren = (item) => {
@@ -26,7 +27,13 @@ export default function Branch({ item, level }) {
       const newLevel = level + 1;
 
       return item.children.map((child) => {
-        return <Branch key={child.id} item={child} level={newLevel}></Branch>;
+        return (
+          <BranchCustom
+            key={child.id}
+            item={child}
+            level={newLevel}
+          ></BranchCustom>
+        );
       });
     }
     return null;
@@ -36,13 +43,13 @@ export default function Branch({ item, level }) {
   };
   return (
     <>
-      <Node
+      <NodeCustom
         item={item}
         selected={selected}
         hasChildren={hasChildren}
         level={level}
         onToggle={toggleSelected}
-      ></Node>
+      ></NodeCustom>
 
       {selected && renderBranches()}
     </>

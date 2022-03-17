@@ -1,7 +1,7 @@
 import React from "react";
-import Branch from "./Branch";
+import Branch from "./Branch/BranchCustom";
 
-export default function Tree({ data }) {
+export default function TreeCustom({ data }) {
   return (
     <div>
       {data.map((item) => (

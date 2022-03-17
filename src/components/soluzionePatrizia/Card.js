@@ -1,16 +1,19 @@
-import React from "react";
-import Tree from "./../../Tree/index";
+import Component, { useEffect, useState } from "react";
+import SolTree from "./../../SolTree";
 export function Card({ k, data }) {
+  const [expanded, setExpanded] = useState(false);
+  const [index, setIndex] = useState("");
   return (
     <div className="card">
       <div className="card-header" key={k} id={"heading" + k}>
         <h5 className="mb-0">
           <button
-            className="btn btn-link collapsed"
+            className={expanded ? "btn btn-link" : "btn btn-link collapsed"}
             data-toggle="collapse"
             data-target={"#collapse" + k}
-            aria-expanded="false"
+            aria-expanded={expanded ? "true" : "false"}
             aria-controls={"collapse" + k}
+            onClick={() => setExpanded((prev) => !prev)}
           >
             {k}
           </button>
@@ -18,7 +21,7 @@ export function Card({ k, data }) {
       </div>
       <div
         id={"#collapse" + k}
-        className="collapse "
+        className={expanded ? "collapse show" : "collapse"}
         aria-labelledby="headingOne"
         data-parent="#accordion"
       >
@@ -28,7 +31,7 @@ export function Card({ k, data }) {
             paddingLeft: "15px",
           }}
         >
-          <Tree key={`${k}tree`} data={data} />
+          <SolTree key={`${k}tree`} data={data} />
         </div>
       </div>
     </div>
