@@ -32,7 +32,7 @@ function App() {
   const [treeData, setTreeData] = useState([]);
   const [mainSections, setMainSections] = useState([]);
   useEffect(() => {
-    fetch("./assets/UIconfig.json")
+    fetch("./assets/UIconfigs.json")
       .then((response) => {
         return response.json();
       })
@@ -53,7 +53,7 @@ function App() {
         <div className="col">
           <h4 className="text-danger">Con libreria</h4>
 
-          <JSONTree
+          {/* <JSONTree
             hideRoot
             getItemString={(type, data, itemType, itemString, keyPath) => <></>}
             theme={theme}
@@ -75,7 +75,7 @@ function App() {
                 treeData={treeData}
               ></CheckBox>
             )}
-          />
+          /> */}
         </div>
       </div>
       <div className="row">
@@ -89,7 +89,7 @@ function App() {
         <div className="col-12">
           <h4 className="text-danger">Senza libreria soluzione patrizia</h4>
 
-          {/* <SolTree treeData={treeData} /> */}
+          <SolTree treeData={treeData} />
         </div>
       </div>
       <div className="row mt-4">

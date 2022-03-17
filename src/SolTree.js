@@ -1,48 +1,34 @@
 import Component, { useEffect, useState } from "react";
 
-const conf = {
-  landing: true,
-  visibile: true,
-  attivo: true,
-  cards: {
-    visibile: true,
-    visualizzazioni: true,
-    contatti: true,
-    attivita: true,
-    visite: false,
-  },
-  mappa: {
-    visibile: true,
-    visualizzazioni: true,
-    contatti: true,
-    attivita: true,
-    visite: true,
-    preferiti: true,
-  },
-  "top-performers": {
-    visibile: true,
-    kpi: {
-      visualizzazioni: true,
-      contatti: true,
-    },
-    attivita: {
-      attivita: true,
-      visite: 13,
-    },
-  },
-  preferiti: true,
-};
-
 const Tree = ({ data }) => {
+  const handleIndex = (title, value) => {
+    console.log(title, value);
+  };
+
+  const handleInputChange = () => {};
   return Object.keys(data).map((k) => {
     if (typeof data[k] === "boolean") {
       return (
-        <div key={k}>
-          {k}: {data[k] === true ? "checked" : "non checked"}
+        <div key={k} onClick={() => handleIndex(k, data[k])}>
+          {k}:{" "}
+          <input
+            type="checkbox"
+            onChange={() => handleInputChange(k, data[k])}
+            checked={data[k]}
+          ></input>
         </div>
       );
     } else if (typeof data[k] === "number") {
-      return <div key={k}>{k}: input field</div>;
+      return (
+        <div key={k}>
+          {k}:{" "}
+          <input
+            type="number"
+            onChange={() => handleInputChange(k, data[k])}
+            value={data[k]}
+          ></input>
+        </div>
+      );
     } else {
       return (
         <div key={k}>
