@@ -1,42 +1,15 @@
-import Component, { useEffect, useState } from "react";
+import Component, { useContext, useEffect, useState } from "react";
 import { Card } from "./components/soluzionePatrizia/Card";
+import InputCheckBox from "./components/soluzionePatrizia/InputCheckBox";
+import { InputNumber } from "./components/soluzionePatrizia/InputNumber";
+import { MainContext } from "./context/MainContext";
 
 const SolTree = ({ data }) => {
-  const [expanded, setExpanded] = useState(false);
-  const [index, setIndex] = useState("");
-  const handleIndex = (title, value) => {
-    console.log(title, value);
-  };
-
-  const handleExpand = (k) => {
-    setIndex(k);
-    setExpanded((prev) => !prev);
-  };
-  const handleInputChange = () => {};
-
   return Object.keys(data).map((k) => {
     if (typeof data[k] === "boolean") {
-      return (
-        <div key={k} onClick={() => handleIndex(k, data[k])}>
-          {k}:{" "}
-          <input
-            type="checkbox"
-            onChange={() => handleInputChange(k, data[k])}
-            checked={data[k]}
-          ></input>
-        </div>
-      );
+      return <InputCheckBox k={k} data={data} />;
     } else if (typeof data[k] === "number") {
-      return (
-        <div key={k}>
-          {k}:{" "}
-          <input
-            type="number"
-            onChange={() => handleInputChange(k, data[k])}
-            value={data[k]}
-          ></input>
-        </div>
-      );
+      return <InputNumber k={k} data={data} />;
     } else {
       return <Card k={k} data={data[k]}></Card>;
     }

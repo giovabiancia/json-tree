@@ -7,6 +7,7 @@ import Label from "./components/libreria/Label";
 import Tree from "./Tree/TreeCustom";
 import { DATA } from "./constants/constants";
 import SolTree from "./SolTree";
+import { MainContextProvider } from "./context/MainContext";
 
 function App() {
   const theme = {
@@ -38,6 +39,7 @@ function App() {
       })
       .then((data) => {
         // Work with JSON data here
+        console.log(data);
         setTreeData(data);
         setMainSections(Object.keys(data));
       })
@@ -85,20 +87,22 @@ function App() {
           {/* <Tree data={DATA} /> */}
         </div>
       </div>
-      <div className="row mt-4">
-        <div className="col-12">
-          <h4 className="text-danger">Senza libreria soluzione patrizia</h4>
+      <MainContextProvider>
+        <div className="row mt-4">
+          <div className="col-12">
+            <h4 className="text-danger">Senza libreria soluzione patrizia</h4>
 
-          <div>
-            <SolTree data={treeData} />
+            <div>
+              <SolTree data={treeData} />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="row mt-4">
-        <div className="col-12">
-          <button className="btn btn-primary">Salva Configurazione</button>
+        <div className="row mt-4">
+          <div className="col-12">
+            <button className="btn btn-primary">Salva Configurazione</button>
+          </div>
         </div>
-      </div>
+      </MainContextProvider>
     </div>
   );
 }

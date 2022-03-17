@@ -1,8 +1,13 @@
 import Component, { useEffect, useState } from "react";
 import SolTree from "./../../SolTree";
-export function Card({ k, data }) {
+export function Card({ k, data, i }) {
   const [expanded, setExpanded] = useState(false);
   const [index, setIndex] = useState("");
+
+  const handleClickIndex = () => {
+    setExpanded((prev) => !prev);
+    // il numero di iterazione per ottenere il livello del nodo
+  };
   return (
     <div className="card">
       <div className="card-header" key={k} id={"heading" + k}>
@@ -13,9 +18,9 @@ export function Card({ k, data }) {
             data-target={"#collapse" + k}
             aria-expanded={expanded ? "true" : "false"}
             aria-controls={"collapse" + k}
-            onClick={() => setExpanded((prev) => !prev)}
+            onClick={handleClickIndex}
           >
-            {k}
+            {k.replace(/-/g, " ")}
           </button>
         </h5>
       </div>
