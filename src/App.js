@@ -2,8 +2,8 @@ import Component, { useEffect, useState } from "react";
 import "./App.css";
 
 import { JSONTree } from "react-json-tree";
-import CheckBox from "./components/CheckBox.";
-import Label from "./components/Label";
+import CheckBox from "./components/libreria/CheckBox.";
+import Label from "./components/libreria/Label";
 import Tree from "./Tree";
 import { DATA } from "./constants/constants";
 import SolTree from "./SolTree";

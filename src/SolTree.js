@@ -1,8 +1,15 @@
 import Component, { useEffect, useState } from "react";
 
 const Tree = ({ data }) => {
+  const [expanded, setExpanded] = useState(false);
+  const [index, setIndex] = useState("");
   const handleIndex = (title, value) => {
     console.log(title, value);
+  };
+
+  const handleExpand = (k) => {
+    setIndex(k);
+    setExpanded((prev) => !prev);
   };
 
   const handleInputChange = () => {};
@@ -31,10 +38,34 @@ const Tree = ({ data }) => {
       );
     } else {
       return (
-        <div key={k}>
-          {k}
-          <div style={{ padding: "5px" }}>
-            <Tree key={`${k}tree`} data={data[k]} />
+        <div className="card">
+          <div className="card-header" key={k} id={"heading" + k}>
+            <h5 className="mb-0">
+              <button
+                className={
+                  expanded && index === k
+                    ? "btn btn-link "
+                    : "btn btn-link collapsed"
+                }
+                data-toggle="collapse"
+                data-target={"#collapse" + k}
+                aria-expanded={expanded && index === k ? "true" : "false"}
+                aria-controls={"collapse" + k}
+                onClick={() => handleExpand(k)}
+              >
+                {k}
+              </button>
+            </h5>
+          </div>
+          <div
+            id={"#collapse" + k}
+            className={expanded && index === k ? "collapse show" : "collapse"}
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+          >
+            <div className="card-body" style={{ paddingLeft: "15px" }}>
+              <Tree key={`${k}tree`} data={data[k]} />
+            </div>
           </div>
         </div>
       );
