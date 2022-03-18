@@ -39,7 +39,17 @@ function App() {
       })
       .then((data) => {
         // Work with JSON data here
-        console.log(data);
+        let counter = 0;
+        function addIds(data) {
+          for (const item in data) {
+            if (typeof data[item] == "object") {
+              data[item].id = counter++;
+              addIds(data[item], counter);
+            }
+          }
+        }
+        addIds(data, 1);
+
         setTreeData(data);
         setMainSections(Object.keys(data));
       })

@@ -10,8 +10,18 @@ export const MainContextProvider = (props) => {
         return response.json();
       })
       .then((data) => {
+        let counter = 0;
+        function addIds(data) {
+          for (const item in data) {
+            if (typeof data[item] == "object") {
+              data[item].id = counter++;
+              addIds(data[item], counter);
+            }
+          }
+        }
+        addIds(data, 1);
+
         setMainContext(data);
-        console.log(data);
       })
       .catch((err) => {
         console.log("Error Reading data " + err);
