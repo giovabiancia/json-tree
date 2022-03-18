@@ -26,13 +26,17 @@ function InputCheckBox({ k, data }) {
   };
 
   return (
-    <div key={k}>
-      {k}:{" "}
-      <input
-        type="checkbox"
-        onChange={(e) => handleCheckBoxChange(data, k, e.target.checked)}
-        checked={checked}
-      ></input>
+    <div key={k} className="form-group row">
+      <label class="col-sm-2 col-form-label">{k}</label>
+
+      <div className="col-sm-10">
+        <input
+          type="checkbox"
+          className="form-control"
+          onChange={(e) => handleCheckBoxChange(data, k, e.target.checked)}
+          checked={checked}
+        ></input>
+      </div>
     </div>
   );
 }

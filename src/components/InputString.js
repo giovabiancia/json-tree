@@ -29,6 +29,7 @@ export function InputString({ k, data }) {
       {k}:{" "}
       <input
         type="string"
+        className="form-control"
         onChange={(e) => handleStringChange(data, k, e.target.value)}
         value={string}
       ></input>

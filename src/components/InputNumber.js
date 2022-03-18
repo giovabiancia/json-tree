@@ -29,6 +29,7 @@ export function InputNumber({ k, data }) {
       {k}:{" "}
       <input
         type="number"
+        className="form-control"
         onChange={(e) => handleNumberChange(data, k, e.target.value)}
         value={number}
       ></input>
