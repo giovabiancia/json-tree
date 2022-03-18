@@ -2,6 +2,7 @@ import React from "react";
 import SolTree from "./SolTree";
 import { useContext } from "react";
 import { MainContext } from "./context/MainContext";
+import { ButtonSave } from "./components/soluzionePatrizia/ButtonSave";
 
 export default function MainSolution() {
   const [mainContext, setMainContext] = useContext(MainContext);
@@ -12,6 +13,7 @@ export default function MainSolution() {
 
         <div>
           <SolTree data={mainContext} />
+          <ButtonSave></ButtonSave>
         </div>
       </div>
     </div>

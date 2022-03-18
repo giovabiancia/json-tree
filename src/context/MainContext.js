@@ -6,7 +6,7 @@ export const MainContextProvider = (props) => {
   const [mainContext, setMainContext] = useState({});
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch("./assets/UIconfigs.json")
+    fetch("./assets/UIconfig.json")
       .then((response) => {
         return response.json();
       })
