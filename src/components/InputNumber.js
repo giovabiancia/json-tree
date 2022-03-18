@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { MainContext } from "./../context/MainContext";
 
 const _ = require("lodash");
