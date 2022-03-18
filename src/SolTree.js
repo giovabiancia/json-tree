@@ -3,14 +3,17 @@ import { Card } from "./components/soluzionePatrizia/Card";
 import InputCheckBox from "./components/soluzionePatrizia/InputCheckBox";
 import { InputNumber } from "./components/soluzionePatrizia/InputNumber";
 import { MainContext } from "./context/MainContext";
+import { InputString } from "./components/soluzionePatrizia/InputString";
 
 const SolTree = ({ data }) => {
   return Object.keys(data).map((k, i) => {
     if (k === "ids") return null;
 
     //TODO gestisci campo array
+    console.log(data[k]);
 
     if (Array.isArray(data[k])) {
+      console.log("trovato array");
       return null;
     }
 
@@ -18,6 +21,8 @@ const SolTree = ({ data }) => {
       return <InputCheckBox key={i} k={k} data={data} />;
     } else if (typeof data[k] === "number") {
       return <InputNumber key={i} k={k} data={data} />;
+    } else if (typeof data[k] === "string") {
+      return <InputString key={i} k={k} data={data} />;
     } else {
       return <Card key={i} k={k} data={data[k]}></Card>;
     }

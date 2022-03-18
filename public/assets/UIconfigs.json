@@ -3,6 +3,7 @@
       "landing": false,
       "visibile": true,
       "attivo": true,
+      "regioni":[],
       "cards": {
         "visibile": true,
         "visualizzazioni": true,
@@ -231,7 +232,112 @@
           }
         }
       }
+    },
+    "osservatorio": {
+      "visibile": true,
+      "landing": false,
+      "attivo": true,
+      "filtri": {
+        "tipo-periodo": {
+          "1M": true,
+          "3M": true,
+          "6M": true,
+          "12M": true
+        },
+        "da": true,
+        "a": true,
+        "tipo-contratto": {
+          "vendita": true,
+          "affitto": true
+        },
+        "tipologie": {
+          "appartamento": true,
+          "attico": true,
+          "casa": true,
+          "palazzo": true,
+          "casale": true,
+          "villa": true,
+          "villetta": true,
+          "loft": true
+        },
+        "geografica": {
+          "regione": true,
+          "provincia": true,
+          "comune": true,
+          "macro": true
+        }
+      },
+      "tabs": {
+        "annunci": {
+          "landing": true,
+          "visibile": true,
+          "attivo": true,
+          "valori": {
+            "visibile": true,
+            "items": {
+              "valori-assoluti": {
+                "non-segmentati": true,
+                "status": true,
+                "locali": true
+              },
+              "percentuali": {
+                "non-segmentati": true,
+                "status": true,
+                "locali": true
+              }
+            }
+          },
+          "percentuali": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
+          }
+        },
+        "prezzi": {
+          "landing": false,
+          "visibile": true,
+          "attivo": true,
+          "serie-storiche": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
+          }
+        },
+        "contatti": {
+          "landing": false,
+          "visibile": true,
+          "attivo": true,
+          "serie-storiche": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
+          }
+        },
+        "visite": {
+          "landing": false,
+          "visibile": true,
+          "attivo": true,
+          "serie-storiche": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
+          }
+        }
+      }
+    },
+    "prova":{
+      "ciao": "prova"
     }
-
-
 }
