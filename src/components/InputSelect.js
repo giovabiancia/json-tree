@@ -26,13 +26,15 @@ export function InputSelect({ k, data }) {
   };
 
   return (
-    <div style={{ display: "flex" }}>
-      <label>{k}: </label>
-      <input
-        className="form-control"
-        value={string}
-        onChange={handleStringChange}
-      ></input>
+    <div className="form-group row">
+      <label className="col-sm-2 col-form-label">{k} </label>
+      <div className="col-sm-10">
+        <input
+          className="form-control"
+          value={string}
+          onChange={handleStringChange}
+        ></input>
+      </div>
     </div>
   );
 }

@@ -25,14 +25,16 @@ export function InputNumber({ k, data }) {
   };
 
   return (
-    <div key={k}>
-      {k}:{" "}
-      <input
-        type="number"
-        className="form-control"
-        onChange={(e) => handleNumberChange(data, k, e.target.value)}
-        value={number}
-      ></input>
+    <div key={k} className="form-group row">
+      <label className="col-sm-2 col-form-label">{k}</label>
+      <div className="col-sm-10">
+        <input
+          type="number"
+          className="form-control"
+          onChange={(e) => handleNumberChange(data, k, e.target.value)}
+          value={number}
+        ></input>
+      </div>
     </div>
   );
 }
