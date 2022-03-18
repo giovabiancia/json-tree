@@ -13,14 +13,14 @@ export function InputNumber({ k, data }) {
       for (let key in newTree) {
         const val = newTree[key];
         if (val === idNewNode) {
-          newTree[k] = e;
+          newTree[k] = parseInt(e);
         }
         if (typeof val === "object") {
           updateTree(val, newNode);
         }
       }
     }
-    updateTree(newTree, node);
+    updateTree(newTree, node, k, e);
     setMainContext(newTree);
   };
 

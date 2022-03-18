@@ -14,7 +14,6 @@ export default function MainSolution() {
           <SolTree data={mainContext} />
           <ButtonSave></ButtonSave>
         </div>
-        <ButtonSave></ButtonSave>
       </div>
     </div>
   );

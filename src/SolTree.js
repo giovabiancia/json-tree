@@ -9,7 +9,7 @@ const SolTree = ({ data }) => {
     if (k === "ids") return null;
 
     if (Array.isArray(data[k])) {
-      return <InputSelect key={i} data={data[k]} k={k} />;
+      return <InputSelect key={i} k={k} data={data[k]} />;
     }
     if (typeof data[k] === "boolean") {
       return <InputCheckBox key={i} k={k} data={data} />;
