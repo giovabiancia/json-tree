@@ -14,7 +14,7 @@ export const MainContextProvider = (props) => {
         function addIds(data) {
           for (const item in data) {
             if (typeof data[item] == "object") {
-              data[item].id = counter++;
+              data[item].ids = counter++;
               addIds(data[item], counter);
             }
           }

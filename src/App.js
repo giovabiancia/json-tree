@@ -8,6 +8,7 @@ import Tree from "./Tree/TreeCustom";
 import { DATA } from "./constants/constants";
 import SolTree from "./SolTree";
 import { MainContextProvider } from "./context/MainContext";
+import { ButtonSave } from "./components/soluzionePatrizia/ButtonSave";
 
 function App() {
   const theme = {
@@ -43,7 +44,7 @@ function App() {
         function addIds(data) {
           for (const item in data) {
             if (typeof data[item] == "object") {
-              data[item].id = counter++;
+              data[item].ids = counter++;
               addIds(data[item], counter);
             }
           }
@@ -107,11 +108,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="row mt-4">
-          <div className="col-12">
-            <button className="btn btn-primary">Salva Configurazione</button>
-          </div>
-        </div>
+        <ButtonSave></ButtonSave>
       </MainContextProvider>
     </div>
   );

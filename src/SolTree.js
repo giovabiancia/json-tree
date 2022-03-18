@@ -6,6 +6,8 @@ import { MainContext } from "./context/MainContext";
 
 const SolTree = ({ data }) => {
   return Object.keys(data).map((k) => {
+    if (k === "ids") return null;
+
     if (typeof data[k] === "boolean") {
       return <InputCheckBox k={k} data={data} />;
     } else if (typeof data[k] === "number") {
