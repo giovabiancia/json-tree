@@ -4,6 +4,7 @@ export const MainContext = createContext();
 
 export const MainContextProvider = (props) => {
   const [mainContext, setMainContext] = useState({});
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     fetch("./assets/UIconfigs.json")
       .then((response) => {

@@ -62,46 +62,10 @@ function App() {
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col">
-          <h4 className="text-danger">Con libreria</h4>
-
-          {/* <JSONTree
-            hideRoot
-            getItemString={(type, data, itemType, itemString, keyPath) => <></>}
-            theme={theme}
-            data={treeData}
-            invertTheme={true}
-            labelRenderer={([key, parentKey, rootKey]) => (
-              <Label
-                value={key.replace(/-/g, " ")}
-                parentKey={parentKey}
-                rootKey={rootKey}
-                treeData={treeData}
-              ></Label>
-            )}
-            valueRenderer={(raw, value, keyPath) => (
-              <CheckBox
-                raw={raw}
-                value={value}
-                keyPath={keyPath}
-                treeData={treeData}
-              ></CheckBox>
-            )}
-          /> */}
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <h4 className="text-danger">Senza libreria</h4>
-
-          {/* <Tree data={DATA} /> */}
-        </div>
-      </div>
       <MainContextProvider>
         <div className="row mt-4">
           <div className="col-12">
-            <h4 className="text-danger">Senza libreria soluzione patrizia</h4>
+            <h4 className="text-danger">Senza libreria </h4>
 
             <div>
               <SolTree data={treeData} />

@@ -339,7 +339,7 @@
       "min-level": "regioni",
       "max-level": "comuni",
       "allowed": {
-        "regioni": [],
+        "regioni": [9,12,8],
         "province": [],
         "comuni": [],
         "macro": [],

@@ -5,15 +5,21 @@ import { InputNumber } from "./components/soluzionePatrizia/InputNumber";
 import { MainContext } from "./context/MainContext";
 
 const SolTree = ({ data }) => {
-  return Object.keys(data).map((k) => {
+  return Object.keys(data).map((k, i) => {
     if (k === "ids") return null;
 
+    //TODO gestisci campo array
+
+    if (Array.isArray(data[k])) {
+      return null;
+    }
+
     if (typeof data[k] === "boolean") {
-      return <InputCheckBox k={k} data={data} />;
+      return <InputCheckBox key={i} k={k} data={data} />;
     } else if (typeof data[k] === "number") {
-      return <InputNumber k={k} data={data} />;
+      return <InputNumber key={i} k={k} data={data} />;
     } else {
-      return <Card k={k} data={data[k]}></Card>;
+      return <Card key={i} k={k} data={data[k]}></Card>;
     }
   });
 };

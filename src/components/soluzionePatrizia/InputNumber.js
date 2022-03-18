@@ -1,36 +1,36 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { MainContext } from "./../../context/MainContext";
 const _ = require("lodash");
 export function InputNumber({ k, data }) {
   const [mainContext, setMainContext] = useContext(MainContext);
   const [number, setNumber] = useState(data[k]);
-  const handleNumberChange = (nodo, k, e) => {
+  const handleNumberChange = (node, k, e) => {
     // setta il main context
     console.log(data);
     setNumber(e);
     // copia dell' albero
-    var newAlbero = _.cloneDeep(mainContext);
+    var newTree = _.cloneDeep(mainContext);
     // modifica il nodo
-    nodo[k] = e;
-    function updateTree(newAlbero, nuovoNodo) {
+    node[k] = e;
+    function updateTree(newTree, newNode) {
       // trova l' id del nodo all' interno dell' albero
-      let idNuovoNodo = nuovoNodo.ids;
+      let idNewNode = newNode.ids;
 
-      for (let key in newAlbero) {
-        const val = newAlbero[key];
-        if (val === idNuovoNodo) {
-          //console.log("albero a cui sostituire il nodo:", newAlbero);
+      for (let key in newTree) {
+        const val = newTree[key];
+        if (val === idNewNode) {
+          //console.log("albero a cui sostituire il nodo:", newTree);
           // sostituire il valore alla copia dell' albero nello stesso ramo
-          newAlbero[k] = e;
+          newTree[k] = e;
         }
         // controlla se ha figli
         if (typeof val === "object") {
-          updateTree(val, nuovoNodo);
+          updateTree(val, newNode);
         }
       }
     }
-    updateTree(newAlbero, nodo, k, e);
-    setMainContext(newAlbero);
+    updateTree(newTree, node, k, e);
+    setMainContext(newTree);
   };
 
   /* useEffect(() => {
