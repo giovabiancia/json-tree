@@ -1,192 +1,117 @@
 {
-  "dashboard": {
-    "landing": false,
-    "visibile": true,
-    "attivo": true,
-    "cards": {
+    "dashboard": {
+      "landing": false,
       "visibile": true,
-      "visualizzazioni": true,
-      "contatti": true,
-      "attivita": true,
-      "visite": true
-    },
-    "mappa": {
-      "visibile": true,
-      "visualizzazioni": true,
-      "contatti": true,
-      "attivita": true,
-      "visite": true,
-      "preferiti": true
-    },
-    "top-performers": {
-      "visibile": true,
-      "kpi": {
-        "visualizzazioni": true,
-        "contatti": true
-      },
-      "attivita": {
-        "attivita": true,
-        "visite": true
-      }
-    },
-    "preferiti": true
-  },
-  "esplora": {
-    "visibile": true,
-    "landing": false,
-    "attivo": true,
-    "filtri": {
-      "localizzazione": {
-        "attivo": true,
+      "attivo": true,
+      "attsdaivo": 12,
+
+      "cards": {
         "visibile": true,
-        "geografica": {
-          "attivo": true,
-          "visibile": true,
-          "regione": true,
-          "provincia": true,
-          "comune": true,
-          "macro": true
-        },
-        "zone_speciali": true
-      },
-      "tipologici": {
-        "tipologia": true,
-        "stato_conservazione": true,
-        "superficie": true,
-        "prezzo": true
-      },
-      "categorizzazione": {
-        "asta": true,
-        "venduto": true,
-        "trasferito-rimpossessato": true,
-        "reddito": true,
-        "chiavi": true,
-        "data-trasf-5-anni": true,
-        "b-plan-scadenza": true,
-        "agente": true,
-        "portafoglio": true,
-        "lotto": true,
-        "status-commercializzazione": true,
-        "status-mandati": true,
-        "vendibile-in": true,
-        "periodo-riferimento": true,
-        "data-vendita": true,
-        "scadenza-mandato": true
-      },
-      "preferiti": true,
-      "riferimento": true,
-      "bottoni": {
-        "ripristina": true,
-        "filtra": true,
-        "salva-filtro": true,
-        "esporta-pdf-lista": true
-      }
-    },
-    "tabs": {
-      "tabella": {
-        "attivo": true,
-        "visibile": true,
-        "items": {
-          "item": {
-            "bottoni": {
-              "scheda": true,
-              "lotto": true,
-              "portafoglio": true
-            }
-          },
-          "bottoni": {
-            "preferiti": true,
-            "esporta-pdf": {
-              "attivo": true,
-              "visibile": true,
-              "max-qt": 100
-            }
-          }
-        }
-      },
-      "mappa": {
-        "attivo": true,
-        "visibile": true
-      },
-      "kpi-ricerca": {
-        "attivo": true,
-        "visibile": true,
-        "attività": true,
+
         "visualizzazioni": true,
         "contatti": true,
-        "salvati": true,
-        "nascosti": true
-      }
-    },
-    "asset": {
-      "attivo": true,
-      "visibile": true,
-      "bottoni": {
-        "preferiti": true,
-        "download-pdf": true,
-        "value":100
+        "attivita": true,
+        "visite": true
       },
-      "max-qt": 3,
+      "mappa": {
+        "visibile": true,
+        "visualizzazioni": true,
+        "contatti": true,
+        "attivita": true,
+        "visite": true,
+        "preferiti": true
+      },
+      "top-performers": {
+        "visibile": true,
+        "kpi": {
+          "visualizzazioni": true,
+          "contatti": true
+        },
+        "attivita": {
+          "attivita": true,
+          "visite": true
+        }
+      },
+      "preferiti": true
+    },
+    "esplora": {
+      "visibile": true,
+      "landing": false,
+      "attivo": true,
+      "filtri": {
+        "localizzazione": {
+          "attivo": true,
+          "visibile": true,
+          "geografica": {
+            "attivo": true,
+            "visibile": true,
+            "regione": true,
+            "provincia": true,
+            "comune": true,
+            "macro": true
+          },
+          "zone_speciali": true
+        },
+        "tipologici": {
+          "tipologia": true,
+          "stato_conservazione": true,
+          "superficie": true,
+          "prezzo": true
+        },
+        "categorizzazione": {
+          "asta": true,
+          "venduto": true,
+          "trasferito-rimpossessato": true,
+          "reddito": true,
+          "chiavi": true,
+          "data-trasf-5-anni": true,
+          "b-plan-scadenza": true,
+          "agente": true,
+          "portafoglio": true,
+          "lotto": true,
+          "status-commercializzazione": true,
+          "status-mandati": true,
+          "vendibile-in": true,
+          "periodo-riferimento": true,
+          "data-vendita": true,
+          "scadenza-mandato": true
+        },
+        "preferiti": true,
+        "riferimento": true,
+        "bottoni": {
+          "ripristina": true,
+          "filtra": true,
+          "salva-filtro": true,
+          "esporta-pdf-lista": true
+        }
+      },
       "tabs": {
-        "tipologiche": {
+        "tabella": {
           "attivo": true,
           "visibile": true,
-          "posizione": true,
-          "caratteristiche": true,
-          "pubblicazione": true
+          "items": {
+            "item": {
+              "bottoni": {
+                "scheda": true,
+                "lotto": true,
+                "portafoglio": true
+              }
+            },
+            "bottoni": {
+              "preferiti": true,
+              "esporta-pdf": {
+                "attivo": true,
+                "visibile": true,
+                "max-qt": 100
+              }
+            }
+          }
         },
-        "asta": {
+        "mappa": {
           "attivo": true,
-          "visibile": true,
-          "referente": true,
-          "aste": true,
-          "stima": true,
-          "vendita": true
+          "visibile": true
         },
-        "libero-mercato": {
-          "attivo": true,
-          "visibile": true,
-          "referente": true,
-          "libero-mercato": true,
-          "stima": true,
-          "vendita": true
-        },
-        "contesto-socio-demo": {
-          "attivo": true,
-          "visibile": true,
-          "residenti": true,
-          "provenienza": true,
-          "eta": true,
-          "famiglie": true
-        },
-        "catasto": {
-          "attivo": true,
-          "visibile": true,
-          "dati": true,
-          "mappa": true
-        },
-        "omi": {
-          "attivo": true,
-          "visibile": true,
-          "mappa": true,
-          "dati": true,
-          "principale": true,
-          "altri": true
-        },
-        "compravendite": {
-          "attivo": true,
-          "visibile": true,
-          "grafico": true,
-          "classifica-provincia": true,
-          "classifica-regione": true
-        },
-        "comparabili": {
-          "attivo": true,
-          "visibile": true,
-          "mappa": true,
-          "items": true
-        },
-        "kpi-asset": {
+        "kpi-ricerca": {
           "attivo": true,
           "visibile": true,
           "attività": true,
@@ -195,156 +120,233 @@
           "salvati": true,
           "nascosti": true
         }
-      }
-    }
-  },
-  "ricerche-salvate": {
-    "visibile": true,
-    "landing": false,
-    "attivo": true,
-    "filtri": {
-      "nome": true,
-      "id": true,
-      "periodo-riferimento": true,
-      "raggruppate": true,
-      "bottoni": {
-        "ripristina": true,
-        "filtra": true
-      }
-    },
-    "tabs": {
-      "tabella": {
+      },
+      "asset": {
         "attivo": true,
         "visibile": true,
-        "items": {
-          "item": {
-            "bottoni": {
-              "rinomina": true,
-              "modifica": true,
-              "esplora": true,
-              "elimina": true
-            }
+        "bottoni": {
+          "preferiti": true,
+          "download-pdf": true,
+          "value":100
+        },
+        "max-qt": 3,
+        "tabs": {
+          "tipologiche": {
+            "attivo": true,
+            "visibile": true,
+            "posizione": true,
+            "caratteristiche": true,
+            "pubblicazione": true
           },
-          "bottoni": {
-            "raggruppa": true
+          "asta": {
+            "attivo": true,
+            "visibile": true,
+            "referente": true,
+            "aste": true,
+            "stima": true,
+            "vendita": true
+          },
+          "libero-mercato": {
+            "attivo": true,
+            "visibile": true,
+            "referente": true,
+            "libero-mercato": true,
+            "stima": true,
+            "vendita": true
+          },
+          "contesto-socio-demo": {
+            "attivo": true,
+            "visibile": true,
+            "residenti": true,
+            "provenienza": true,
+            "eta": true,
+            "famiglie": true
+          },
+          "catasto": {
+            "attivo": true,
+            "visibile": true,
+            "dati": true,
+            "mappa": true
+          },
+          "omi": {
+            "attivo": true,
+            "visibile": true,
+            "mappa": true,
+            "dati": true,
+            "principale": true,
+            "altri": true
+          },
+          "compravendite": {
+            "attivo": true,
+            "visibile": true,
+            "grafico": true,
+            "classifica-provincia": true,
+            "classifica-regione": true
+          },
+          "comparabili": {
+            "attivo": true,
+            "visibile": true,
+            "mappa": true,
+            "items": true
+          },
+          "kpi-asset": {
+            "attivo": true,
+            "visibile": true,
+            "attività": true,
+            "visualizzazioni": true,
+            "contatti": true,
+            "salvati": true,
+            "nascosti": true
           }
         }
       }
-    }
-  },
-  "osservatorio": {
-    "visibile": true,
-    "landing": false,
-    "attivo": true,
-    "filtri": {
-      "tipo-periodo": {
-        "1M": true,
-        "3M": true,
-        "6M": true,
-        "12M": true
-      },
-      "da": true,
-      "a": true,
-      "tipo-contratto": {
-        "vendita": true,
-        "affitto": true
-      },
-      "tipologie": {
-        "appartamento": true,
-        "attico": true,
-        "casa": true,
-        "palazzo": true,
-        "casale": true,
-        "villa": true,
-        "villetta": true,
-        "loft": true
-      },
-      "geografica": {
-        "regione": true,
-        "provincia": true,
-        "comune": true,
-        "macro": true
-      }
     },
-    "tabs": {
-      "annunci": {
-        "landing": true,
-        "visibile": true,
-        "attivo": true,
-        "valori": {
+    "ricerche-salvate": {
+      "visibile": true,
+      "landing": false,
+      "attivo": true,
+      "filtri": {
+        "nome": true,
+        "id": true,
+        "periodo-riferimento": true,
+        "raggruppate": true,
+        "bottoni": {
+          "ripristina": true,
+          "filtra": true
+        }
+      },
+      "tabs": {
+        "tabella": {
+          "attivo": true,
           "visibile": true,
           "items": {
-            "valori-assoluti": {
-              "non-segmentati": true,
-              "status": true,
-              "locali": true
+            "item": {
+              "bottoni": {
+                "rinomina": true,
+                "modifica": true,
+                "esplora": true,
+                "elimina": true
+              }
             },
-            "percentuali": {
+            "bottoni": {
+              "raggruppa": true
+            }
+          }
+        }
+      }
+    },
+    "osservatorio": {
+      "visibile": true,
+      "landing": false,
+      "attivo": true,
+      "filtri": {
+        "tipo-periodo": {
+          "1M": true,
+          "3M": true,
+          "6M": true,
+          "12M": true
+        },
+        "da": true,
+        "a": true,
+        "tipo-contratto": {
+          "vendita": true,
+          "affitto": true
+        },
+        "tipologie": {
+          "appartamento": true,
+          "attico": true,
+          "casa": true,
+          "palazzo": true,
+          "casale": true,
+          "villa": true,
+          "villetta": true,
+          "loft": true
+        },
+        "geografica": {
+          "regione": true,
+          "provincia": true,
+          "comune": true,
+          "macro": true
+        }
+      },
+      "tabs": {
+        "annunci": {
+          "landing": true,
+          "visibile": true,
+          "attivo": true,
+          "valori": {
+            "visibile": true,
+            "items": {
+              "valori-assoluti": {
+                "non-segmentati": true,
+                "status": true,
+                "locali": true
+              },
+              "percentuali": {
+                "non-segmentati": true,
+                "status": true,
+                "locali": true
+              }
+            }
+          },
+          "percentuali": {
+            "visibile": true,
+            "items": {
               "non-segmentati": true,
               "status": true,
               "locali": true
             }
           }
         },
-        "percentuali": {
+        "prezzi": {
+          "landing": false,
           "visibile": true,
-          "items": {
-            "non-segmentati": true,
-            "status": true,
-            "locali": true
+          "attivo": true,
+          "serie-storiche": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
+          }
+        },
+        "contatti": {
+          "landing": false,
+          "visibile": true,
+          "attivo": true,
+          "serie-storiche": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
+          }
+        },
+        "visite": {
+          "landing": false,
+          "visibile": true,
+          "attivo": true,
+          "serie-storiche": {
+            "visibile": true,
+            "items": {
+              "non-segmentati": true,
+              "status": true,
+              "locali": true
+            }
           }
         }
-      },
-      "prezzi": {
-        "landing": false,
-        "visibile": true,
-        "attivo": true,
-        "serie-storiche": {
-          "visibile": true,
-          "items": {
-            "non-segmentati": true,
-            "status": true,
-            "locali": true
-          }
+      },"mappa": {
+        "min-level": "regioni",
+        "max-level": "comuni",
+        "allowed": {
+          "regioni": [9,12,8],
+          "province": [],
+          "comuni": [],
+          "macro": [],
+          "micro": []
         }
-      },
-      "contatti": {
-        "landing": false,
-        "visibile": true,
-        "attivo": true,
-        "serie-storiche": {
-          "visibile": true,
-          "items": {
-            "non-segmentati": true,
-            "status": true,
-            "locali": true
-          }
-        }
-      },
-      "visite": {
-        "landing": false,
-        "visibile": true,
-        "attivo": true,
-        "serie-storiche": {
-          "visibile": true,
-          "items": {
-            "non-segmentati": true,
-            "status": true,
-            "locali": true
-          }
-        }
-      }
-    },
-    "mappa": {
-      "min-level": "regioni",
-      "max-level": "comuni",
-      "allowed": {
-        "regioni": [9,12,8],
-        "province": [],
-        "comuni": [],
-        "macro": [],
-        "micro": []
       }
     }
-  }
 }

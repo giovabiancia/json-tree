@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { MainContext } from "./../../context/MainContext";
+import { MainContext } from "../context/MainContext";
 export function ButtonSave({}) {
   const [mainContext, setMainContext] = useContext(MainContext);
 

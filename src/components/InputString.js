@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
-import { MainContext } from "./../../context/MainContext";
+import { MainContext } from "./../context/MainContext";
+
 const _ = require("lodash");
 export function InputString({ k, data }) {
   const [mainContext, setMainContext] = useContext(MainContext);

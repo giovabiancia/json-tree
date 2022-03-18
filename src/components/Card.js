@@ -1,5 +1,5 @@
 import Component, { useEffect, useState } from "react";
-import SolTree from "./../../SolTree";
+import SolTree from "../SolTree";
 export function Card({ k, data, i }) {
   const [expanded, setExpanded] = useState(false);
   const [index, setIndex] = useState("");
