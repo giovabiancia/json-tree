@@ -3,7 +3,7 @@
       "landing": false,
       "visibile": true,
       "attivo": true,
-      "regioni":[],
+      "regioni":false,
       "cards": {
         "visibile": true,
         "visualizzazioni": true,
@@ -336,8 +336,5 @@
           }
         }
       }
-    },
-    "prova":{
-      "ciao": "prova"
     }
 }

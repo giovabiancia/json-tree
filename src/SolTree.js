@@ -10,11 +10,11 @@ const SolTree = ({ data }) => {
     if (k === "ids") return null;
 
     //TODO gestisci campo array
-    console.log(data[k]);
 
     if (Array.isArray(data[k])) {
       console.log("trovato array");
-      return null;
+      console.log(data[k]);
+      return <p>is array {typeof data[k]}</p>;
     }
 
     if (typeof data[k] === "boolean") {
