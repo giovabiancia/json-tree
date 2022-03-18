@@ -1,14 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import { MainContext } from "./../../context/MainContext";
-
 const _ = require("lodash");
-
-function InputCheckBox({ k, data }) {
-  const [checked, setChecked] = useState(data[k]);
+export function InputSelect({ k, data }) {
   const [mainContext, setMainContext] = useContext(MainContext);
-  const handleCheckBoxChange = (node, k, e) => {
-    setChecked((prev) => !prev);
+  const [string, setString] = useState(data.toString());
+  const handleStringChange = (node, k, e) => {
+    setString(e);
     var newTree = _.cloneDeep(mainContext);
+    node[k] = e;
     function updateTree(newTree, newNode) {
       let idNewNode = newNode.ids;
       for (let key in newTree) {
@@ -26,14 +25,13 @@ function InputCheckBox({ k, data }) {
   };
 
   return (
-    <div key={k}>
-      {k}:{" "}
+    <div style={{ display: "flex" }}>
+      <label>{k}: </label>
       <input
-        type="checkbox"
-        onChange={(e) => handleCheckBoxChange(data, k, e.target.checked)}
-        checked={checked}
+        className="form-control"
+        value={string}
+        onChange={handleStringChange}
       ></input>
     </div>
   );
 }
-export default InputCheckBox;

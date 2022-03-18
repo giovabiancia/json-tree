@@ -3,9 +3,10 @@
       "landing": false,
       "visibile": true,
       "attivo": true,
-      "regioni":false,
+      "regioni":[1,2,3,4,5,6,7,8,9,10],
       "cards": {
         "visibile": true,
+
         "visualizzazioni": true,
         "contatti": true,
         "attivita": true,
@@ -334,6 +335,16 @@
               "locali": true
             }
           }
+        }
+      },"mappa": {
+        "min-level": "regioni",
+        "max-level": "comuni",
+        "allowed": {
+          "regioni": [9,12,8],
+          "province": [],
+          "comuni": [],
+          "macro": [],
+          "micro": []
         }
       }
     }

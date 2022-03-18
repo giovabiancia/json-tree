@@ -4,6 +4,7 @@ import InputCheckBox from "./components/soluzionePatrizia/InputCheckBox";
 import { InputNumber } from "./components/soluzionePatrizia/InputNumber";
 import { MainContext } from "./context/MainContext";
 import { InputString } from "./components/soluzionePatrizia/InputString";
+import { InputSelect } from "./components/soluzionePatrizia/InputSelect";
 
 const SolTree = ({ data }) => {
   return Object.keys(data).map((k, i) => {
@@ -12,9 +13,9 @@ const SolTree = ({ data }) => {
     //TODO gestisci campo array
 
     if (Array.isArray(data[k])) {
-      console.log("trovato array");
-      console.log(data[k]);
-      return <p>is array {typeof data[k]}</p>;
+      const Select = <InputSelect data={data[k]} k={k} />;
+
+      return Select;
     }
 
     if (typeof data[k] === "boolean") {
