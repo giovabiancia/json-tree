@@ -9,7 +9,7 @@ export function Card({ k, data, i }) {
     // il numero di iterazione per ottenere il livello del nodo
   };
   return (
-    <div className="card">
+    <div className="card ">
       <div className="card-header" key={k} id={"heading" + k}>
         <h5 className="mb-0">
           <button
@@ -31,7 +31,7 @@ export function Card({ k, data, i }) {
         data-parent="#accordion"
       >
         <div
-          className="card-body"
+          className="card-body mt-2"
           style={{
             paddingLeft: "15px",
           }}

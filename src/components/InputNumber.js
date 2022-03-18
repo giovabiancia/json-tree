@@ -25,7 +25,7 @@ export function InputNumber({ k, data }) {
   };
 
   return (
-    <div key={k} className="form-group row">
+    <div key={k} className="form-group row mt-4">
       <label className="col-sm-2 col-form-label">{k}</label>
       <div className="col-sm-10">
         <input
