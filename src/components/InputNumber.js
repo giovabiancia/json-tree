@@ -1,13 +1,13 @@
-import React, { useState, useContext, useEffect } from "react";
-import { MainContext } from "./../../context/MainContext";
+import React, { useState, useContext } from "react";
+import { MainContext } from "./../context/MainContext";
+
 const _ = require("lodash");
-export function InputSelect({ k, data }) {
+export function InputNumber({ k, data }) {
   const [mainContext, setMainContext] = useContext(MainContext);
-  const [string, setString] = useState(data.toString());
-  const handleStringChange = (node, k, e) => {
-    setString(e);
+  const [number, setNumber] = useState(data[k]);
+  const handleNumberChange = (node, k, e) => {
+    setNumber(e);
     var newTree = _.cloneDeep(mainContext);
-    node[k] = e;
     function updateTree(newTree, newNode) {
       let idNewNode = newNode.ids;
       for (let key in newTree) {
@@ -20,17 +20,17 @@ export function InputSelect({ k, data }) {
         }
       }
     }
-    updateTree(newTree, node, k, e);
+    updateTree(newTree, node);
     setMainContext(newTree);
   };
 
   return (
-    <div style={{ display: "flex" }}>
-      <label>{k}: </label>
+    <div key={k}>
+      {k}:{" "}
       <input
-        className="form-control"
-        value={string}
-        onChange={handleStringChange}
+        type="number"
+        onChange={(e) => handleNumberChange(data, k, e.target.value)}
+        value={number}
       ></input>
     </div>
   );
