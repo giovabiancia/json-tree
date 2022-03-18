@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
-import { MainContext } from "./../../context/MainContext";
+import React, { useState, useContext, useEffect } from "react";
+import { MainContext } from "../context/MainContext";
+
 const _ = require("lodash");
-export function InputNumber({ k, data }) {
+
+function InputCheckBox({ k, data }) {
+  const [checked, setChecked] = useState(data[k]);
   const [mainContext, setMainContext] = useContext(MainContext);
-  const [number, setNumber] = useState(data[k]);
-  const handleNumberChange = (node, k, e) => {
-    setNumber(e);
+  const handleCheckBoxChange = (node, k, e) => {
+    setChecked((prev) => !prev);
     var newTree = _.cloneDeep(mainContext);
     function updateTree(newTree, newNode) {
       let idNewNode = newNode.ids;
@@ -27,10 +29,11 @@ export function InputNumber({ k, data }) {
     <div key={k}>
       {k}:{" "}
       <input
-        type="number"
-        onChange={(e) => handleNumberChange(data, k, e.target.value)}
-        value={number}
+        type="checkbox"
+        onChange={(e) => handleCheckBoxChange(data, k, e.target.checked)}
+        checked={checked}
       ></input>
     </div>
   );
 }
+export default InputCheckBox;

@@ -3,6 +3,10 @@
       "landing": false,
       "visibile": true,
       "attivo": true,
+<<<<<<< HEAD
+=======
+      "attsdaivo": 12,
+>>>>>>> d9062032b7af99dad5af64c7a2bd29235a440edd
 
       "cards": {
         "visibile": true,
