@@ -26,7 +26,7 @@ function InputCheckBox({ k, data }) {
   };
 
   return (
-    <div key={k} className="form-group row">
+    <div key={k} className="form-group row  mt-4">
       <label className="col-sm-2">{k}</label>
 
       <div className="col-sm-10">
